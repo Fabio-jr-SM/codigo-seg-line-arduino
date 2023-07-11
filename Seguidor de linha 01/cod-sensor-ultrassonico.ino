@@ -3,17 +3,17 @@
 #include "Ultrasonic.h"
 
 //Criando objeto ultrasonic e definindo as portas digitais
-//do Trigger - 9 - e Echo - 10
-Ultrasonic SensorUltrassonico(9, 10);
+//do Trigger - 4 - e Echo - 5
+Ultrasonic SensorUltrassonico(4, 5);
 
 long Microsegundos = 0;// Variável para armazenar o valor do tempo da reflexão do som refletido pelo objeto fornecido pela biblioteca do sensor
 float DistanciaemCM = 0;// Variável para armazenar o valor da distância a ser convertido por uma função da própria bilbioteca do sensor
 
 //---Motores Ponte H
-#define MotorDireito1 2
-#define MotorDireito2 3
-#define MotorEsquerdo1 4
-#define MotorEsquerdo2 5
+#define MotorDireito1 8
+#define MotorDireito2 9
+#define MotorEsquerdo1 10
+#define MotorEsquerdo2 11
 
 
 void setup() {
