@@ -10,6 +10,16 @@
 bool Sensor1 = 0;
 bool Sensor2 = 0;
 
+/*é utilizado um sensor infravermelho reflexivo para detecção de cores em uma superfície. 
+Nesse caso específico, o valor lógico 0 é atribuído à cor branca, enquanto o valor lógico 
+1 é atribuído à cor preta.
+
+No código, são realizadas leituras dos sensores infravermelhos reflexivos conectados aos 
+pinos pin_S1 e pin_S2. O valor 0 (false) é atribuído à variável Sensor1 e à variável 
+Sensor2 quando a luz infravermelha refletida pelos sensores corresponde à cor branca. 
+Isso indica que a superfície branca reflete bem a luz infravermelha, resultando em um 
+valor lógico 0.*/
+
 //variável responsável por controlar a velocidade dos motores
 int velocidade = 150;
 
@@ -20,13 +30,15 @@ void setup(){
   pinMode(dir1, OUTPUT);
   pinMode(dir2, OUTPUT);
   
-  //Setamos a direção inicial do motor como 0, isso fará com que ambos os motores girem para frente
-  digitalWrite(dir1, LOW);
-  digitalWrite(dir2, LOW);
-  
   //Setamos os pinos dos sensores como entrada
   pinMode(pin_S1, INPUT);
   pinMode(pin_S2, INPUT);
+
+  //Setamos a direção inicial do motor como 0, isso fará com que ambos os motores girem para frente
+  //Nesse caso o LOW vai para frente, pois depende de cada circuito, como o LOW vai para frente o
+  //HIGH vai na direção oposta.
+  digitalWrite(dir1, LOW);
+  digitalWrite(dir2, LOW);
 }
 
 void loop(){
