@@ -4,34 +4,37 @@
 
 ```ino
 
-void setup()
-{
-  /*A função setup() é chamada quando um sketch inicia. 
-  Use-a para inicializar variáveis, configurar o modo 
-  dos pinos(INPUT ou OUTPUT), inicializar bibliotecas,
-  etc. A função setup() será executada apenas uma vez, 
-  apoós a placa ser alimentada ou acontecer um reset.*/
-  
-  pinMode(2, OUTPUT);
+void setup() {
+  // Função setup() é executada apenas uma vez no início do programa
+
+  // Configuração inicial do Arduino
+
+  // Configurar os pinos, como definir se são entradas ou saídas
+  pinMode(13, OUTPUT);  // Define o pino 13 como saída (LED embutido na placa Arduino)
+
+  // Inicializar outros componentes, se necessário
+
+  // Configurar comunicação serial, se necessário
+
+  // Outras configurações iniciais
 }
 
+void loop() {
+  // Função loop() é executada continuamente após a função setup()
 
-void loop()
-{
-  
-  	/*Depois de criar uma função setup(), a qual 
-    inicializa e atribui os valores iniciais, a 
-    função loop() faz precisamente o que o seu 
-    nome sugere, e repete-se consecutivamente 
-    enquanto a placa estiver ligada, permitindo 
-    o seu programa mudar e responder a essas mudanças. 
-    Use-a para controlar ativamente uma placa Arduino.*/
-  
-    digitalWrite(2, HIGH);
-    delay(1000);
+  // Código que será repetido indefinidamente
 
-    digitalWrite(2, LOW);
-    delay(1000);               
+  // Ler sensores, receber entradas do usuário, etc.
+
+  // Executar a lógica principal do programa
+
+  // Controlar atuadores, como acionar motores, acender LEDs, etc.
+
+  // Enviar dados pela comunicação serial, se necessário
+
+  // Outras tarefas do programa
+
+  // O programa volta para o início da função loop() e repete o ciclo novamente
 }
 ```
 
