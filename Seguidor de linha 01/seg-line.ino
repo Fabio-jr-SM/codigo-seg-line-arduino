@@ -24,7 +24,7 @@ valor lógico 0.*/
 int velocidade = 150;
 
 void setup(){
-  //Setamos os pinos de controle dos motores como saída
+  //Setamos os pinos de controle dos motores como saída 
   pinMode(M1, OUTPUT);
   pinMode(M2, OUTPUT);
   pinMode(dir1, OUTPUT);
